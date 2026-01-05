@@ -14,8 +14,8 @@ function App() {
     <ThemeProvider>
       <div className="App" style={{ minHeight: '100vh', background: 'var(--bg-primary)', color: 'var(--text-primary)', paddingBottom: '100px' }}>
         <Hero />
-        <Projects />
         <Experience />
+        <Projects />
         <Recommendations />
         <ToolkitAndTalks />
         <OpenSource />
