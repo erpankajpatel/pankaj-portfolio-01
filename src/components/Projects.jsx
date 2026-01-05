@@ -82,45 +82,53 @@ const Projects = () => {
                     justifyContent: 'center'
                   }}>
                     {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          display: 'block',
-                          opacity: 0.6,
-                          filter: 'grayscale(30%) brightness(0.85)',
-                          transition: 'opacity 0.3s ease, filter 0.3s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.target.style.opacity = '0.8'
-                          e.target.style.filter = 'grayscale(15%) brightness(0.9)'
-                        }}
-                        onMouseLeave={(e) => {
-                          const theme = document.documentElement.getAttribute('data-theme')
-                          e.target.style.opacity = theme === 'light' ? '0.6' : '0.7'
-                          e.target.style.filter = theme === 'light' ? 'grayscale(30%) brightness(0.85)' : 'grayscale(20%) brightness(0.9)'
-                        }}
-                        onError={(e) => {
-                          e.target.style.display = 'none'
-                          e.target.parentElement.innerHTML = `
-                            <div style="
-                              width: 100%;
-                              height: 100%;
-                              display: flex;
-                              align-items: center;
-                              justify-content: center;
-                              background: var(--bg-secondary);
-                              color: var(--text-muted);
-                              font-size: 1.5rem;
-                            ">
-                              📱
-                            </div>
-                          `
-                        }}
-                      />
+                      <picture>
+                        <source
+                          srcSet={`${project.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')} 1x, ${project.image.replace(/\.(jpg|jpeg|png)$/i, '@2x.webp')} 2x`}
+                          type="image/webp"
+                        />
+                        <img
+                          src={project.image}
+                          alt={project.name}
+                          loading="lazy"
+                          decoding="async"
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            display: 'block',
+                            opacity: 0.6,
+                            filter: 'grayscale(30%) brightness(0.85)',
+                            transition: 'opacity 0.3s ease, filter 0.3s ease'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.target.style.opacity = '0.8'
+                            e.target.style.filter = 'grayscale(15%) brightness(0.9)'
+                          }}
+                          onMouseLeave={(e) => {
+                            const theme = document.documentElement.getAttribute('data-theme')
+                            e.target.style.opacity = theme === 'light' ? '0.6' : '0.7'
+                            e.target.style.filter = theme === 'light' ? 'grayscale(30%) brightness(0.85)' : 'grayscale(20%) brightness(0.9)'
+                          }}
+                          onError={(e) => {
+                            e.target.style.display = 'none'
+                            e.target.parentElement.innerHTML = `
+                              <div style="
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: var(--bg-secondary);
+                                color: var(--text-muted);
+                                font-size: 1.5rem;
+                              ">
+                                📱
+                              </div>
+                            `
+                          }}
+                        />
+                      </picture>
                     ) : (
                       <div style={{
                         width: '100%',
