@@ -17,6 +17,7 @@ async function optimizeImage(inputPath, outputPath, width, height, quality = 85)
     }
 
     await sharp(inputPath)
+      .rotate() // Auto-rotate based on EXIF orientation
       .resize(width, height, {
         fit: 'cover',
         position: 'center'
