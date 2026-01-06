@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { portfolioData } from '../data/portfolioData'
 import ExperienceModal from './ExperienceModal'
+import { FaInfoCircle } from 'react-icons/fa'
 
 const Experience = () => {
   const { experience } = portfolioData
@@ -106,25 +107,49 @@ const Experience = () => {
                   {/* Content - Right side */}
                   <div style={{
                     flex: 1,
-                    width: '100%'
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    justifyContent: 'space-between',
+                    gap: '1rem'
                   }}>
-                    <h3 style={{
-                      fontSize: '1.125rem',
-                      fontWeight: 400,
-                      color: 'var(--text-primary)',
-                      letterSpacing: '-0.01em',
-                      marginBottom: '0.25rem',
-                      fontFamily: "'Space Grotesk', sans-serif"
-                    }}>
-                      {exp.position}
-                    </h3>
-                    <p style={{
-                      fontSize: '0.875rem',
-                      color: 'var(--text-secondary)',
-                      fontWeight: 400
-                    }}>
-                      {exp.company}
-                    </p>
+                    <div style={{ flex: 1 }}>
+                      <h3 style={{
+                        fontSize: '1.125rem',
+                        fontWeight: 400,
+                        color: 'var(--text-primary)',
+                        letterSpacing: '-0.01em',
+                        marginBottom: '0.25rem',
+                        fontFamily: "'Space Grotesk', sans-serif"
+                      }}>
+                        {exp.position}
+                      </h3>
+                      <p style={{
+                        fontSize: '0.875rem',
+                        color: 'var(--text-secondary)',
+                        fontWeight: 400
+                      }}>
+                        {exp.company}
+                      </p>
+                    </div>
+                    <motion.div
+                      initial={{ opacity: 0.5, scale: 0.9 }}
+                      whileHover={{ opacity: 1, scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        color: 'var(--text-secondary)',
+                        fontSize: '0.75rem',
+                        fontWeight: 400,
+                        fontFamily: "'Inter', sans-serif",
+                        flexShrink: 0
+                      }}
+                    >
+                      <FaInfoCircle style={{ fontSize: '0.875rem' }} />
+                      <span>More info</span>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>

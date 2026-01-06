@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { portfolioData } from '../data/portfolioData'
 import ProjectModal from './ProjectModal'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaInfoCircle } from 'react-icons/fa'
 
 const Projects = () => {
   const { projects } = portfolioData
@@ -81,6 +81,32 @@ const Projects = () => {
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
+                    {/* More Info Indicator Overlay */}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      style={{
+                        position: 'absolute',
+                        top: '0.75rem',
+                        right: '0.75rem',
+                        zIndex: 10,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.375rem',
+                        background: 'rgba(0, 0, 0, 0.7)',
+                        backdropFilter: 'blur(8px)',
+                        padding: '0.375rem 0.625rem',
+                        borderRadius: '20px',
+                        color: '#ffffff',
+                        fontSize: '0.7rem',
+                        fontWeight: 400,
+                        fontFamily: "'Inter', sans-serif",
+                        pointerEvents: 'none'
+                      }}
+                    >
+                      <FaInfoCircle style={{ fontSize: '0.7rem' }} />
+                      <span>More info</span>
+                    </motion.div>
                     {project.image ? (
                       <picture>
                         <source
