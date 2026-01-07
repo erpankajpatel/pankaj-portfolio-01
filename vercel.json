@@ -1,9 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "vite",
   "rewrites": [
     {
       "source": "/(.*)",
@@ -30,36 +25,11 @@
       ]
     },
     {
-      "source": "/pranay-photo.jpg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        },
-        {
-          "key": "Content-Type",
-          "value": "image/jpeg"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    },
-    {
       "source": "/pranay-photo-og.jpg",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400"
-        },
-        {
-          "key": "Content-Type",
-          "value": "image/jpeg"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
         }
       ]
     }
