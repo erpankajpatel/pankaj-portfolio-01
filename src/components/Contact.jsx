@@ -80,7 +80,6 @@ const Contact = () => {
                 aspectRatio: "1",
                 borderRadius: "var(--radius, 8px)",
                 overflow: "hidden",
-                border: "1px solid var(--border-color)",
                 background: "var(--bg-card)",
                 boxShadow: "var(--shadow-sm)",
               }}
