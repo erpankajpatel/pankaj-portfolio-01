@@ -15,12 +15,12 @@ function App() {
     <ThemeProvider>
       <div className="App" style={{ minHeight: '100vh', background: 'var(--bg-primary)', color: 'var(--text-primary)', paddingBottom: '100px' }}>
         <Hero />
+        <Contact />
         <Experience />
         <Projects />
         <ToolkitAndTalks />
         <OpenSource />
         <Recommendations />
-        <Contact />
         <BottomNav />
         <SpeedInsights />
       </div>
