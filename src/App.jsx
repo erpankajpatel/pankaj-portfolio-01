@@ -15,8 +15,8 @@ function App() {
       <div className="App" style={{ minHeight: '100vh', background: 'var(--bg-primary)', color: 'var(--text-primary)', paddingBottom: '100px' }}>
         <Hero />
         <Experience />
-        <Projects />
         <Recommendations />
+        <Projects />
         <ToolkitAndTalks />
         <OpenSource />
         <Contact />
