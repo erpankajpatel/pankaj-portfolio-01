@@ -1,4 +1,4 @@
-# Pranay Patel - Portfolio Website
+# Pankaj Patel - Portfolio Website
 
 A modern, bold, and creative single-page portfolio website showcasing 9+ years of mobile development experience, with a unique focus on leadership and mentoring capabilities.
 
@@ -153,7 +153,7 @@ ISC
 
 ## Contact
 
-- Email: iampranaypatel@gmail.com
-- Website: https://pranaypatel.netlify.app/
+- Email: patelpankaj.1010@gmail.com
+- Website: https://pankaj-portfolio-01.vercel.app
 - LinkedIn: https://www.linkedin.com/in/pranaypatel512/
 
