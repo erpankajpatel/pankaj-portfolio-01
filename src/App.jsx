@@ -1,4 +1,5 @@
 import React from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { ThemeProvider } from './context/ThemeContext'
 import BottomNav from './components/BottomNav'
 import Hero from './components/Hero'
@@ -14,13 +15,14 @@ function App() {
     <ThemeProvider>
       <div className="App" style={{ minHeight: '100vh', background: 'var(--bg-primary)', color: 'var(--text-primary)', paddingBottom: '100px' }}>
         <Hero />
-        <Projects />
         <Experience />
-        <Recommendations />
+        <Projects />
         <ToolkitAndTalks />
         <OpenSource />
+        <Recommendations />
         <Contact />
         <BottomNav />
+        <SpeedInsights />
       </div>
     </ThemeProvider>
   )

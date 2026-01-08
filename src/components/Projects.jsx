@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { portfolioData } from '../data/portfolioData'
 import ProjectModal from './ProjectModal'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaInfoCircle } from 'react-icons/fa'
 
 const Projects = () => {
   const { projects } = portfolioData
@@ -81,46 +81,80 @@ const Projects = () => {
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
+                    {/* More Info Indicator Overlay */}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      style={{
+                        position: 'absolute',
+                        top: '0.75rem',
+                        right: '0.75rem',
+                        zIndex: 10,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.375rem',
+                        background: 'rgba(0, 0, 0, 0.7)',
+                        backdropFilter: 'blur(8px)',
+                        padding: '0.375rem 0.625rem',
+                        borderRadius: '20px',
+                        color: '#ffffff',
+                        fontSize: '0.7rem',
+                        fontWeight: 400,
+                        fontFamily: "'Inter', sans-serif",
+                        pointerEvents: 'none'
+                      }}
+                    >
+                      <FaInfoCircle style={{ fontSize: '0.7rem' }} />
+                      <span>More info</span>
+                    </motion.div>
                     {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.name}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          display: 'block',
-                          opacity: 0.6,
-                          filter: 'grayscale(30%) brightness(0.85)',
-                          transition: 'opacity 0.3s ease, filter 0.3s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.target.style.opacity = '0.8'
-                          e.target.style.filter = 'grayscale(15%) brightness(0.9)'
-                        }}
-                        onMouseLeave={(e) => {
-                          const theme = document.documentElement.getAttribute('data-theme')
-                          e.target.style.opacity = theme === 'light' ? '0.6' : '0.7'
-                          e.target.style.filter = theme === 'light' ? 'grayscale(30%) brightness(0.85)' : 'grayscale(20%) brightness(0.9)'
-                        }}
-                        onError={(e) => {
-                          e.target.style.display = 'none'
-                          e.target.parentElement.innerHTML = `
-                            <div style="
-                              width: 100%;
-                              height: 100%;
-                              display: flex;
-                              align-items: center;
-                              justify-content: center;
-                              background: var(--bg-secondary);
-                              color: var(--text-muted);
-                              font-size: 1.5rem;
-                            ">
-                              📱
-                            </div>
-                          `
-                        }}
-                      />
+                      <picture>
+                        <source
+                          srcSet={`${project.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')} 1x, ${project.image.replace(/\.(jpg|jpeg|png)$/i, '@2x.webp')} 2x`}
+                          type="image/webp"
+                        />
+                        <img
+                          src={project.image}
+                          alt={project.name}
+                          loading="lazy"
+                          decoding="async"
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            display: 'block',
+                            opacity: 0.6,
+                            filter: 'grayscale(30%) brightness(0.85)',
+                            transition: 'opacity 0.3s ease, filter 0.3s ease'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.target.style.opacity = '0.8'
+                            e.target.style.filter = 'grayscale(15%) brightness(0.9)'
+                          }}
+                          onMouseLeave={(e) => {
+                            const theme = document.documentElement.getAttribute('data-theme')
+                            e.target.style.opacity = theme === 'light' ? '0.6' : '0.7'
+                            e.target.style.filter = theme === 'light' ? 'grayscale(30%) brightness(0.85)' : 'grayscale(20%) brightness(0.9)'
+                          }}
+                          onError={(e) => {
+                            e.target.style.display = 'none'
+                            e.target.parentElement.innerHTML = `
+                              <div style="
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: var(--bg-secondary);
+                                color: var(--text-muted);
+                                font-size: 1.5rem;
+                              ">
+                                📱
+                              </div>
+                            `
+                          }}
+                        />
+                      </picture>
                     ) : (
                       <div style={{
                         width: '100%',

@@ -63,34 +63,42 @@ const Contact = () => {
               background: 'var(--bg-card)',
               boxShadow: 'var(--shadow-sm)'
             }}>
-              <img
-                src={personal.photo || '/placeholder-avatar.png'}
-                alt={personal.name}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block'
-                }}
-                onError={(e) => {
-                  // Fallback if image doesn't exist
-                  e.target.style.display = 'none'
-                  e.target.parentElement.innerHTML = `
-                    <div style="
-                      width: 100%;
-                      height: 100%;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      background: var(--bg-secondary);
-                      color: var(--text-muted);
-                      font-size: 1.5rem;
-                    ">
-                      📷
-                    </div>
-                  `
-                }}
-              />
+              <picture>
+                <source
+                  srcSet={`${personal.photo?.replace('.jpg', '.webp') || '/pranay-photo.webp'} 1x, ${personal.photo?.replace('.jpg', '@2x.webp') || '/pranay-photo@2x.webp'} 2x`}
+                  type="image/webp"
+                />
+                <img
+                  src={personal.photo || '/pranay-photo.jpg'}
+                  alt={personal.name}
+                  loading="lazy"
+                  decoding="async"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                  onError={(e) => {
+                    // Fallback if image doesn't exist
+                    e.target.style.display = 'none'
+                    e.target.parentElement.innerHTML = `
+                      <div style="
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--bg-secondary);
+                        color: var(--text-muted);
+                        font-size: 1.5rem;
+                      ">
+                        📷
+                      </div>
+                    `
+                  }}
+                />
+              </picture>
             </div>
           </motion.div>
 

@@ -14,11 +14,11 @@ const AvailableBadge = () => {
         gap: '0.375rem',
         padding: '0.375rem 0.75rem',
         borderRadius: '16px',
-        background: 'rgba(16, 185, 129, 0.1)',
-        border: '1px solid rgba(16, 185, 129, 0.3)',
-        color: '#10b981',
+        background: 'rgba(16, 185, 129, 0.15)',
+        border: '1px solid rgba(16, 185, 129, 0.4)',
+        color: '#059669',
         fontSize: '0.75rem',
-        fontWeight: 400,
+        fontWeight: 500,
         fontFamily: "'Inter', sans-serif",
         overflow: 'hidden'
       }}
@@ -38,7 +38,7 @@ const AvailableBadge = () => {
           width: '6px',
           height: '6px',
           borderRadius: '50%',
-          background: '#10b981',
+          background: '#059669',
           flexShrink: 0,
           position: 'relative',
           zIndex: 1
@@ -63,7 +63,7 @@ const AvailableBadge = () => {
           width: '6px',
           height: '6px',
           borderRadius: '50%',
-          background: '#10b981',
+          background: '#059669',
           zIndex: 0
         }}
       />

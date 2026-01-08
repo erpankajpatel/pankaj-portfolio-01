@@ -10,7 +10,7 @@ export const portfolioData = {
     email: "iampranaypatel@gmail.com",
     phone: "+917990139255",
     location: "Ahmedabad, India",
-    website: "https://pranaypatel.netlify.app/",
+    website: "https://www.booleancoder.com/",
     resume: "/PranayPatel_SSE_2025.pdf",
     photo: "/pranay-photo.jpg", // Add your photo to the public folder
     social: {

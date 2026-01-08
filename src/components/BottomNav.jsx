@@ -40,7 +40,7 @@ const BottomNav = () => {
 
       // Debounce the scroll handler
       scrollTimeout = setTimeout(() => {
-        const sections = ['hero', 'projects', 'experience', 'recommendations', 'toolkit-talks', 'opensource', 'contact']
+        const sections = ['hero', 'experience', 'projects', 'recommendations', 'toolkit-talks', 'opensource', 'contact']
         const scrollY = window.scrollY
         const windowHeight = window.innerHeight
         const viewportCenter = scrollY + windowHeight / 2
@@ -92,8 +92,8 @@ const BottomNav = () => {
   }, [])
 
   const navItems = [
-    { name: 'Work', href: '#projects', id: 'projects' },
     { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'Work', href: '#projects', id: 'projects' },
     { name: 'Recommendations', href: '#recommendations', id: 'recommendations' },
     { name: 'Tools', href: '#toolkit-talks', id: 'toolkit-talks' },
     { name: 'Open Source', href: '#opensource', id: 'opensource' },
@@ -268,14 +268,14 @@ const BottomNav = () => {
               width: '56px',
               height: '56px',
               borderRadius: '50%',
-              background: 'rgba(99, 102, 241, 0.9)',
+              background: 'var(--active-nav-bg, #6366f1)',
               backdropFilter: 'blur(20px)',
-              border: 'none',
+              border: '1px solid var(--border-color)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
-              boxShadow: '0 4px 20px rgba(99, 102, 241, 0.4)',
+              boxShadow: 'var(--active-nav-shadow, 0 4px 20px rgba(99, 102, 241, 0.4))',
               color: '#ffffff',
               fontSize: '1.25rem'
             }}
@@ -298,24 +298,18 @@ const BottomNav = () => {
                   bottom: '5rem',
                   right: '1.5rem',
                   zIndex: 1000,
-                  background: 'rgba(255, 255, 255, 0.95)',
+                  background: 'var(--bg-card)',
                   backdropFilter: 'blur(20px)',
                   WebkitBackdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  border: '1px solid var(--border-color)',
                   borderRadius: '20px',
                   padding: '1rem',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                  boxShadow: 'var(--shadow-lg)',
                   minWidth: '200px',
                   maxWidth: '90vw'
                 }}
                 className="mobile-nav"
               >
-                <style>{`
-                  [data-theme="dark"] .mobile-nav {
-                    background: rgba(0, 0, 0, 0.95);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                  }
-                `}</style>
                 <div style={{
                   display: 'flex',
                   flexDirection: 'column',

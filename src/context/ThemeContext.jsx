@@ -11,13 +11,13 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
     // Set default theme immediately to prevent flash
-    document.documentElement.setAttribute('data-theme', 'light')
+    document.documentElement.setAttribute('data-theme', 'dark')
     
     // Check localStorage first
     const savedTheme = localStorage.getItem('theme')
@@ -25,9 +25,9 @@ export const ThemeProvider = ({ children }) => {
       setTheme(savedTheme)
       document.documentElement.setAttribute('data-theme', savedTheme)
     } else {
-      // Default to light theme
-      setTheme('light')
-      document.documentElement.setAttribute('data-theme', 'light')
+      // Default to dark theme
+      setTheme('dark')
+      document.documentElement.setAttribute('data-theme', 'dark')
     }
   }, [])
 
