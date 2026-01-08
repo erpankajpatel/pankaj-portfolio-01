@@ -12,7 +12,7 @@ export const portfolioData = {
     location: "Ahmedabad, India",
     website: "https://www.booleancoder.com/",
     resume: "/PankajPatel_SSE_2025.pdf",
-    photo: "/Pankaj-photo.jpg", // Add your photo to the public folder
+    photo: "/Pankaj-photo.png", // Add your photo to the public folder
     social: {
       github: "https://github.com/erpankajpatel",
       linkedin: "https://www.linkedin.com/in/Pankajpatel512/",
