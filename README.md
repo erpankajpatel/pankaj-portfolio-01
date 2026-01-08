@@ -29,12 +29,14 @@ A modern, bold, and creative single-page portfolio website showcasing 9+ years o
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd PAPPORTFOLIO
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
@@ -42,6 +44,7 @@ npm install
 3. Start the development server:
 
 **Option 1: Using the run script (Recommended)**
+
 ```bash
 # Linux/Mac
 ./run.sh
@@ -51,6 +54,7 @@ run.bat
 ```
 
 **Option 2: Using npm directly**
+
 ```bash
 npm run dev
 ```
@@ -83,11 +87,13 @@ npm run preview
 ### Manual Deployment
 
 1. Install Vercel CLI:
+
 ```bash
 npm i -g vercel
 ```
 
 2. Deploy:
+
 ```bash
 vercel
 ```
@@ -95,6 +101,7 @@ vercel
 ### Vercel Configuration
 
 The project includes `vercel.json` with:
+
 - Build configuration
 - SPA routing (all routes redirect to index.html)
 - Cache headers for optimal performance
@@ -136,6 +143,7 @@ PAPPORTFOLIO/
 ## Customization
 
 All portfolio data is centralized in `src/data/portfolioData.js`. Update this file to customize:
+
 - Personal information
 - Experience
 - Projects
@@ -155,5 +163,4 @@ ISC
 
 - Email: patelpankaj.1010@gmail.com
 - Website: https://pankaj-portfolio-01.vercel.app
-- LinkedIn: https://www.linkedin.com/in/pranaypatel512/
-
+- LinkedIn: https://www.linkedin.com/in/Pankajpatel512/
