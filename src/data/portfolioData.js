@@ -4,8 +4,8 @@ export const portfolioData = {
     title: "AI Solutions Lead | Delivery + Engineering | Co-Founder",
     tagline: [
       "A technology leader with a Founder/CTO's mindset, dedicated to building scalable solutions and managing complex delivery pipelines.",
-      "Adept at collaborating with cross-functional teams and clients to translate business goals into impactful, scalable, and user-centric mobile applications. Passionate about driving process efficiency, maintaining code excellence, and delivering exceptional digital experiences through cutting-edge technologies and Agile best practices.",
-      "As an Investor and Mentor, I'm dedicated to building innovative solutions and empowering the next generation of developers.",
+      "With over a decade of hands-on experience, I build high-quality mobile applications across iOS, Android, and Flutter platforms. I combine strong technical expertise with leadership, ensuring scalable architecture, clean code, and successful project delivery aligned with business goals.",
+      "I also specialize in AI integration and development, implementing LLMs, generative AI, and intelligent automation to create smart, data-driven user experiences. Proficient in JIRA, Git, and Bitbucket, I’m passionate about delivering robust, AI-powered mobile ecosystems.",
     ],
     email: "patelpankaj.1010@gmail.com",
     phone: "+919099334421",
