@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { portfolioData } from '../data/portfolioData'
-import { FigmaIcon, VSCodeIcon, GitHubIcon } from './ToolkitIcons'
+import { XcodeIcon, FigmaIcon, VSCodeIcon, GitHubIcon } from './ToolkitIcons'
 
 const Toolkit = () => {
   const { skills } = portfolioData
@@ -11,6 +11,7 @@ const Toolkit = () => {
     {
       title: 'Development',
       tools: [
+        { name: 'Xcode', icon: <XcodeIcon size={24} /> },
         { name: 'Figma', icon: <FigmaIcon size={24} /> },
         { name: 'VSCode', icon: <VSCodeIcon size={24} /> },
         { name: 'Android Studio', icon: <img src="/icons/toolkit/android-studio.svg" alt="Android Studio" style={{ width: '24px', height: '24px' }} /> },

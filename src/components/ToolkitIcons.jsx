@@ -1,6 +1,20 @@
 import React from 'react'
 
 // SVG Icon Components based on jaberelferkh.com toolkit icons
+export const XcodeIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#xcode-bg)"/>
+    <path d="M43.84 19.82a2.5 2.5 0 0 1 .72 3.47l-7.18 11.7 5.75 10.12a2.5 2.5 0 0 1-4.35 2.47L33.85 39l-6.91 11.25a2.5 2.5 0 0 1-4.27-2.62l7.26-11.82-5.94-10.46a2.5 2.5 0 0 1 4.35-2.47l5.12 9.01 6.91-11.24a2.5 2.5 0 0 1 3.47-.73z" fill="#fff"/>
+    <path d="M18.66 18.58a2.5 2.5 0 0 1 3.26-1.36l5.17 2.07a2.5 2.5 0 0 1-1.86 4.64l-5.17-2.08a2.5 2.5 0 0 1-1.4-3.27z" fill="#fff" fillOpacity=".92"/>
+    <defs>
+      <linearGradient id="xcode-bg" x1="10" y1="8" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#44B2FF"/>
+        <stop offset="1" stopColor="#007AFF"/>
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
 export const FigmaIcon = ({ size = 24, color = 'currentColor' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z" fill="#0ACF83"/>
@@ -46,5 +60,4 @@ export const GeminiIcon = ({ size = 24, color = 'currentColor' }) => (
     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
   </svg>
 )
-
 
